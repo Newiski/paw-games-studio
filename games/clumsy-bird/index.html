@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clumsy Bird - Paw Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="referrer" content="no-referrer">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0B0B0F; font-family: 'Outfit', sans-serif; }
+        .top-bar { background: rgba(21, 21, 29, 0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(138,43,226,0.3); }
+        .back-btn { background: #8A2BE2; color: white; text-decoration: none; font-weight: 700; padding: 8px 20px; border-radius: 8px; transition: 0.2s; font-size: 0.9rem; }
+        .back-btn:hover { background: #9d4edd; box-shadow: 0 0 15px rgba(138,43,226,0.5); }
+        .game-title { color: white; font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        iframe { width: 100%; height: calc(100% - 62px); border: none; background: #0B0B0F; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/" class="back-btn">⬅ Back to Home</a>
+        <div class="game-title"><span>🦅</span> Clumsy Bird</div>
+    </div>
+    <iframe src="https://ellisonleao.github.io/clumsy-bird/" referrerpolicy="no-referrer" allowfullscreen></iframe>
+</body>
+</html>
