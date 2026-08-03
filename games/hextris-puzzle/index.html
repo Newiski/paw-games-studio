@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hextris Puzzle - Paw Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="referrer" content="no-referrer">
+    <style>
+        body { background-color: #f4f7f6; color: #2d3436; font-family: 'Nunito', sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; }
+        
+        /* Barre du haut simplifiée */
+        .top-bar { background: #ffffff; padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 10; }
+        .back-btn { background: #f1f2f6; color: #2d3436; text-decoration: none; font-weight: 700; padding: 8px 16px; border-radius: 6px; transition: 0.2s; font-size: 0.9rem; border: 1px solid #dfe6e9; }
+        .back-btn:hover { background: #dfe6e9; }
+        .game-title { font-weight: 800; font-size: 1.1rem; color: #2d3436; }
+        
+        /* Layout principal : Split Screen */
+        .game-layout { display: flex; flex: 1; overflow: hidden; padding: 20px; gap: 20px; max-width: 1600px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+        
+        /* Colonne de gauche (Le jeu) */
+        .game-container { flex: 3; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        iframe { width: 100%; height: 100%; border: none; }
+        
+        /* Colonne de droite (Sidebar : Pub + Suggestions) */
+        .sidebar { flex: 1; min-width: 300px; max-width: 350px; display: flex; flex-direction: column; gap: 20px; overflow-y: auto; }
+        
+        .ad-box { background: #ffffff; border: 2px dashed #dfe6e9; border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: 700; text-align: center; padding: 20px; }
+        
+        .suggestions { background: #ffffff; border-radius: 12px; padding: 20px; border: 1px solid #f1f2f6; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .suggestions h3 { margin: 0 0 15px 0; font-size: 1rem; color: #2d3436; border-bottom: 2px solid #ff6b6b; padding-bottom: 5px; display: inline-block; }
+        
+        .mini-game { display: flex; gap: 10px; margin-bottom: 15px; text-decoration: none; color: inherit; transition: opacity 0.2s; }
+        .mini-game:hover { opacity: 0.7; }
+        .mini-game img { width: 80px; height: 60px; object-fit: cover; border-radius: 6px; }
+        .mini-game-info h4 { margin: 0 0 5px 0; font-size: 0.9rem; }
+        .mini-game-info p { margin: 0; font-size: 0.75rem; color: #636e72; }
+        
+        @media (max-width: 900px) {
+            .game-layout { flex-direction: column; overflow: auto; }
+            .sidebar { max-width: 100%; }
+            .game-container { min-height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/" class="back-btn">← Back to Menu</a>
+        <div class="game-title">Hextris Puzzle</div>
+        <div style="width: 100px;"></div> <!-- Spacer pour centrer le titre -->
+    </div>
+    
+    <div class="game-layout">
+        <!-- Zone de Jeu -->
+        <div class="game-container">
+            <iframe src="https://hextris.github.io/hextris/" referrerpolicy="no-referrer" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Sidebar Monétisation & Rétention -->
+        <aside class="sidebar">
+            <div class="ad-box">
+                ADVERTISEMENT SPACE<br>(300x250)
+            </div>
+            
+            <div class="suggestions">
+                <h3>Similar Games</h3>
+                
+                <a href="/" class="mini-game">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=150&auto=format&fit=crop" alt="Clumsy Bird">
+                    <div class="mini-game-info">
+                        <h4>Clumsy Bird</h4>
+                        <p>Arcade / Flying</p>
+                    </div>
+                </a>
+                
+                <a href="/" class="mini-game">
+                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=150&auto=format&fit=crop" alt="Hextris">
+                    <div class="mini-game-info">
+                        <h4>Hextris Puzzle</h4>
+                        <p>Puzzle / Logic</p>
+                    </div>
+                </a>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
