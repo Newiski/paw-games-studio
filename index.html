@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Games - Premium HTML5 Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0B0B0F; --card: #15151D; --accent: #8A2BE2; --accent-glow: rgba(138,43,226,0.5); --text: #FFFFFF; --text-muted: #888; }
+        body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: rgba(21, 21, 29, 0.8); backdrop-filter: blur(10px); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.8rem; font-weight: 900; letter-spacing: 2px; text-decoration: none; color: white; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: var(--accent); }
+        
+        main { flex: 1; padding: 40px 5%; max-width: 1400px; margin: 0 auto; width: 90%; }
+        
+        .hero { background: linear-gradient(135deg, var(--card) 0%, rgba(138,43,226,0.2) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 50px; text-align: center; margin-bottom: 50px; position: relative; overflow: hidden; }
+        .hero h1 { font-size: 3rem; margin: 0 0 15px 0; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; }
+        
+        h2.section-title { font-size: 1.5rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+        
+        .game-card { background: var(--card); border-radius: 20px; padding: 25px 20px; text-align: center; text-decoration: none; color: white; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        .game-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transition: transform 0.3s ease; }
+        .game-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px var(--accent-glow); border-color: rgba(255,255,255,0.1); }
+        .game-card:hover::before { transform: scaleX(1); }
+        .game-card .emoji { font-size: 4.5rem; margin-bottom: 15px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5)); }
+        .game-card h3 { margin: 0 0 10px 0; font-size: 1.2rem; font-weight: 700; }
+        .game-card p { margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+        
+        .ad-space { background: var(--card); border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 30px; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin: 40px 0; }
+        
+        footer { background: var(--card); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 5%; text-align: center; font-size: 0.9rem; }
+        .legal-links { margin-bottom: 15px; }
+        .legal-links a { color: var(--text-muted); text-decoration: none; margin: 0 15px; transition: color 0.2s; }
+        .legal-links a:hover { color: var(--accent); }
+        .copyright { color: rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">🐾 Paw<span>Games</span></a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Welcome to the Next Level</h1>
+            <p>Play the best curated HTML5 games for free. No downloads, just instant fun.</p>
+        </div>
+        
+        <div class="ad-space">
+            [ Premium Advertisement Space ]
+        </div>
+
+        <h2 class="section-title">Trending Now</h2>
+        <div class="grid">
+            <!-- NEW_GAME_HERE -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="legal-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="copyright">© 2026 Paw Games. All rights reserved.</div>
+    </footer>
+</body>
+</html>
